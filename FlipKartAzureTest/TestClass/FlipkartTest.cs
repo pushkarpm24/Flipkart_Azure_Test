@@ -12,5 +12,12 @@ namespace FlipKartAzureTest
             Login login = new Login(driver);
             login.LoginPage();
         }
+
+        [Test, Order(1)]
+        public void SearchProductTest()
+        {
+            Home home = new Home(driver);
+            home.SelectProduct();
+        }
     }
 }
