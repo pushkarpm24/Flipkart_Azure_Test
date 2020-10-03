@@ -30,7 +30,7 @@ namespace FlipKartAzureTest.Pages
             SearchButton.Click();
             Thread.Sleep(8000);
             ClickOnProduct.Click();
-            Thread.Sleep(3000);
+            Thread.Sleep(5000);
         }
     }
 }

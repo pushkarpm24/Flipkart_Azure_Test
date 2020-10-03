@@ -18,6 +18,15 @@ namespace FlipKartAzureTest
         {
             Home home = new Home(driver);
             home.SelectProduct();
+            driver.SwitchTo().Window(driver.WindowHandles[1]);
+        }
+
+        [Test, Order(2)]
+        public void ShoppingCartTest()
+        {
+            ShoppingCart cart = new ShoppingCart(driver);
+            cart.AddToCart();
+
         }
     }
 }

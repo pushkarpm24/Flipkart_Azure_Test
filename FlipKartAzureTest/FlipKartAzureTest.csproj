@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="Base\BaseClass.cs" />
     <Compile Include="Pages\Home.cs" />
+    <Compile Include="Pages\ShoppingCart.cs" />
     <Compile Include="TestClass\FlipkartTest.cs" />
     <Compile Include="Pages\Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
