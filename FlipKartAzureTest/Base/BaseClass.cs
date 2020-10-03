@@ -17,7 +17,15 @@ namespace FlipKartAzureTest.Base
             driver.Url = "https://www.flipkart.com/";
         }
 
-        [OneTimeTearDown]
+        [TearDown]
+        public void Close()
+        {
+            var filepath = $"{ TestContext.CurrentContext.TestDirectory}\\{TestContext.CurrentContext.Test.MethodName}.jpg";
+            ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(filepath);
+            TestContext.AddTestAttachment(filepath, "Test Screenshots");
+        }
+
+            [OneTimeTearDown]
         public void TearDown()
         {
             driver.Quit();
