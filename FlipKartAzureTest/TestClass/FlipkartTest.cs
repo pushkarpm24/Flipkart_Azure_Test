@@ -28,5 +28,13 @@ namespace FlipKartAzureTest
             cart.AddToCart();
 
         }
+
+        [Test, Order(3)]
+        public void LogoutAccountTest()
+        {
+            Logout logout = new Logout(driver);
+            logout.LogoutFromAccount();
+        }
+
     }
 }
