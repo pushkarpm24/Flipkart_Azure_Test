@@ -11,6 +11,8 @@ namespace FlipKartAzureTest.Pages
         readonly string Password = ConfigurationManager.AppSettings["password"];
 
         public IWebDriver driver;
+
+        [System.Obsolete]
         public Login(IWebDriver driver)
         {
             this.driver = driver;
